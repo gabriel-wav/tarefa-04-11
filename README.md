@@ -1,4 +1,4 @@
-# Task Master - Tarefa 04/11
+# Task Master - Tarefa 04/11 - GABRIEL FERNANDES & PEDRO MESTRE
 
 Projeto desenvolvido para a atividade prática de expansão do sistema Task Master (Spaghetti Edition).
 
