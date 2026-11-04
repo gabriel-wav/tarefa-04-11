@@ -21,7 +21,7 @@ $pdo->exec("CREATE TABLE IF NOT EXISTS tasks (
 $error = '';
 
 // Criar nova tarefa
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['title'])) {
+if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && isset($_POST['title'])) {
     $title = trim($_POST['title'] ?? '');
     $description = trim($_POST['description'] ?? '');
     $dueDate = trim($_POST['due_date'] ?? '');
