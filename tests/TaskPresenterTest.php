@@ -9,7 +9,7 @@ class TaskPresenterTest extends TestCase
 {
     public function testIndexFormataTitulosParaMaiusculo(): void
     {
-        $modelMock = $this->createMock(Task::class);
+        $modelMock = $this->createStub(Task::class);
         $modelMock->method('getAll')->willReturn([
             ['id' => 1, 'title' => 'estudar php', 'description' => '', 'due_date' => '2026-11-11', 'assignee' => 'Ana', 'done' => 0],
         ]);
