@@ -1,6 +1,16 @@
-# Task Master - Tarefa 04/11 - GABRIEL FERNANDES & PEDRO MESTRE
+# Task Master - MVP - Tarefa 04/11
 
-Projeto desenvolvido para a atividade prática de expansão do sistema Task Master (Spaghetti Edition).
+Projeto desenvolvido para a atividade prática de migração do Task Master para MVP.
+
+## Arquitetura
+
+- `src/Model/Task.php`: persistência SQLite, validações e operações das tarefas.
+- `src/Presenter/TaskPresenter.php`: coordena as ações e prepara os dados para a apresentação.
+- `src/View/TaskViewInterface.php`: contrato independente do formato da interface.
+- `src/View/TaskHtmlView.php`: implementação HTML que inclui o template passivo `list.php`.
+- `index.php`: monta as dependências e roteia as ações para o Presenter.
+
+Leia [docs/mvc-vs-mvp.md](docs/mvc-vs-mvp.md) para a comparação entre os padrões.
 
 ## Novas Funcionalidades Adicionadas
 - **Descrição**: Um texto explicativo sobre os detalhes da tarefa (opcional).
@@ -19,6 +29,14 @@ Projeto desenvolvido para a atividade prática de expansão do sistema Task Mast
    ```
 2. Acesse no navegador:
    `http://localhost:8000`
+
+## Teste do Presenter
+
+Com PHPUnit instalado, execute:
+
+```bash
+phpunit tests/TaskPresenterTest.php
+```
 
 ## Como executar no GitHub Codespaces
 1. Abra o repositório no GitHub.
